@@ -10,6 +10,7 @@ See http://skyglobal.github.io/detect/ for a demo of the Component
 ### As JS
 
 http://web-toolkit.global.sky.com/components/detect/0.0.3/js/detect.toolkit.js
+
 http://web-toolkit.global.sky.com/components/detect/0.0.3/js/detect.toolkit.min.js
 
 ### As a Sass Module
