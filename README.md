@@ -9,7 +9,7 @@ See http://skyglobal.github.io/detect/ for a demo of the Component
 
 ### As JS
 
-http://web-toolkit.global.sky.com/components/detect/0.0.2/js/detect.js
+http://web-toolkit.global.sky.com/components/detect/0.0.1/js/detect.js
 
 ### As a Sass Module
 
