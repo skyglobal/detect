@@ -1,3 +1,5 @@
+var event = require('../../bower_components/bskyb-event/dist/js/events/event');
+
 var state = {
     css: {}
 };
