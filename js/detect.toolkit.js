@@ -1,4 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+function capitalise(e){return e.replace(/\b[a-z]/g,function(){return arguments[0].toUpperCase()})}function check(e,t){var n=!1,i=e.toLowerCase()+t.toLowerCase(),o=capitalise(e.toLowerCase())+capitalise(t.toLowerCase());return state[i]?state[i]:("on"+i in window?n=i:"onwebkit"+i in window?n="webkit"+o:"ono"+i in document.documentElement&&(n="o"+o),n)}function bindEvents(){on(window,"resize",function(){clearTimeout(timeout.resize),timeout.resize=setTimeout(emitResizeEnd,200)})}function emitResizeEnd(){emit(window,"resizeend"),"undefined"!=typeof $&&$(window).trigger("resizeend")}function on(e,t,n){var i=browserSpecificEvents[t.toLowerCase()];t=i||t,e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent(t,n)}function off(e,t,n){var i=browserSpecificEvents[t.toLowerCase()];t=i||t,e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent("on"+t,n)}function emit(e,t){var n;document.createEvent?(n=document.createEvent("CustomEvent"),n.initCustomEvent(t,!1,!1,null),e.dispatchEvent(n)):(n=document.createEventObject(),e.fireEvent("on"+t,n))}function ready(e){/in/.test(document.readyState)?setTimeout(function(){ready(e)},9):e()}var timeout={resize:null},state={},browserSpecificEvents={transitionend:check("transition","end"),animationend:check("animation","end")};bindEvents(),module.exports={on:on,off:off,emit:emit,ready:ready};
+},{}],2:[function(require,module,exports){
+var event = require('../../bower_components/bskyb-event/dist/js/events/event');
+
 var state = {
     css: {}
 };
@@ -204,7 +208,7 @@ module.exports = {
     elementVisibleRight: elementVisibleRight,
     updateDetectionStates: updateDetectionStates //just expose this while phantomJS doesnt understand event.emit(window,'resize');
 };
-},{}],2:[function(require,module,exports){
+},{"../../bower_components/bskyb-event/dist/js/events/event":1}],3:[function(require,module,exports){
 var detect = require('./detect');
 
 if (typeof toolkit === "undefined") window.toolkit = {};
@@ -216,4 +220,4 @@ if (typeof window.define === "function" && window.define.amd) {
 } else {
     toolkit.detect = detect;
 }
-},{"./detect":1}]},{},[2]);
+},{"./detect":2}]},{},[3]);
