@@ -1,0 +1,12 @@
+<h2>Touch</h2>
+<p> Detect if the device supports touch: <code>true</code> or <code>false</code>.</p>
+<ul class="grey-bullets">
+    <li>
+        Is touch supported: <span id="touch-demo"></span>
+    </li>
+</ul>
+
+<script>
+    var touch = toolkit.detect.touch();
+    document.querySelector('#touch-demo').innerHTML = touch;
+</script>

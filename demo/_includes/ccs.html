@@ -1,0 +1,34 @@
+<h2>CSS</h2>
+<div>
+    <p>You can detect many css style capabilities, including:</p>
+    <ul class="grey-bullets">
+        <li>transition: <span id="css-demo-transition"></span></li>
+        <li>transform:  <span id="css-demo-transform"></span> i.e. <code>transform: translate(...)</code></li>
+        <li>support3D: <span id="css-demo-support3D"></span> i.e. <code>transform: translate3d</code></li>
+    </ul>
+    <p>You can return the value associated with a css property:</p>
+    <ul class="grey-bullets">
+        <li>transform: <span id="css-demo-return-transform"></span></li>
+    </ul>
+</div>
+
+<script>
+    function updateDetectCSS(toolkit){
+        var demoTransition = document.getElementById('css-demo-transition');
+        var demo3D = document.getElementById('css-demo-support3D');
+        var demoTransform = document.getElementById('css-demo-transform');
+        var returnTransform = document.getElementById('css-demo-return-transform');
+
+        var transition = toolkit.detect.css('transition');
+        var support3D = toolkit.detect.css('support3D');
+        var transform = toolkit.detect.css('transform');
+
+        demoTransition.innerHTML = transition;
+        demo3D.innerHTML = support3D;
+        demoTransform.innerHTML = transform;
+
+        returnTransform.innerHTML = toolkit.detect.css(demoTransition, 'transition');
+    }
+
+    updateDetectCSS(toolkit);
+</script>

@@ -1,0 +1,30 @@
+<h2>Orientation</h2>
+<p> Detect the device/window current orientation: <code>landscape</code> or <code>portrait</code>.</p>
+
+<ul class="grey-bullets">
+    <li>
+        current orientation: <span id="orientation-demo"></span>
+    </li>
+    <li>
+        is landscape: <span id="orientation-demo-is-landscape"></span>
+    </li>
+    <li>
+        is portrait: <span id="orientation-demo-is-portrait"></span>
+    </li>
+</ul>
+
+<script>
+    function updateOrientation(toolkit) {
+        var orientation = toolkit.detect.orientation();
+        var isPortrait = toolkit.detect.orientation('portrait');
+        var isLandscape = toolkit.detect.orientation('landscape');
+
+        document.querySelector('#orientation-demo').innerHTML = orientation;
+        document.querySelector('#orientation-demo-is-landscape').innerHTML = isLandscape;
+        document.querySelector('#orientation-demo-is-portrait').innerHTML = isLandscape;
+    }
+
+    window.onresize = updateOrientation(toolkit);
+    updateOrientation(toolkit);
+
+</script>

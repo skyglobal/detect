@@ -1,7 +1,7 @@
 [detect](http://skyglobal.github.io/detect/)
 ========================
 
-> detect
+> Toolkit detect component
 
 See http://skyglobal.github.io/detect/ for a demo of the Component
 
