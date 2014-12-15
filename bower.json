@@ -11,11 +11,11 @@
     "license": "MIT",
     "ignore": [
         "**/*",
-        "!dist/**/*"
+        "!dist/**/*",
+        "!src/**/*"
     ],
     "devDependencies": {
         "bskyb-colours": "~0.0.8",
-        "bskyb-typography": "~0.0.3",
-        "bskyb-event": "~0.0.5"
+        "bskyb-typography": "~0.0.3"
     }
 }

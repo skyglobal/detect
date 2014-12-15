@@ -1,12 +1,12 @@
 <h2>Touch</h2>
-<p> Detect if the device supports touch: <code>true</code> or <code>false</code>.</p>
+<p> Detect if the device supports touch.</p>
 <ul class="grey-bullets">
     <li>
-        Is touch supported: <span id="touch-demo"></span>
+        Is touch supported: <span id="touch-demo" class="medium"></span>
     </li>
 </ul>
 
+
 <script>
-    var touch = toolkit.detect.touch();
-    document.querySelector('#touch-demo').innerHTML = touch;
+    document.querySelector('#touch-demo').innerHTML = skyComponents.detect.touch();
 </script>

@@ -2,25 +2,6 @@
 @import 'bower_components/bskyb-colours/dist/scss/colours';
 @import 'bower_components/bskyb-typography/dist/scss/typography';
 
-
-@media (orientation: portrait) {
-  html:before {
-    content: 'portrait';
-    font-family: 'portrait';
-    }
-}
-
-@media (orientation: landscape) {}
-html:before {
-  content: 'landscape';
-  font-family: 'landscape';
-}
-
-html:after {
-  content: 'desktop';
-  font-family: 'desktop';
-}
-
 /* Common demo Sass here */
 .demo-block{
   margin-bottom: 20px;
