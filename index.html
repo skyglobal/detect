@@ -2,126 +2,59 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>detect</title>
+    <title>Detect</title>
 
     <link rel="stylesheet" href="css/demo.css"/>
+    <script src="js/detect.js"></script>
 </head>
 <body>
 
-<h1>detect
-    <small  class="demo-version text--secondary">v0.0.3
+<h1>Detect
+    <small  class="demo-version text--secondary">v0.0.4
         <a href="https://github.com/skyglobal/detect" class="text--secondary">
             <span class="demo-icon demo-icon--github"  aria-hidden=true></span>
             <span class="speak">Github Repo</span>
         </a></small>
 </h1>
-<p>The <code>.detect</code> object allows you to check for a number of browser features and states.</p>
-<script src="js/detect.toolkit.min.js"></script>
+
+<p>The <code>detect</code> object allows you to check for a number of browser features and states.</p>
+
+
 
 
 
 <h2>CSS</h2>
 <div>
     <p>You can detect many css style capabilities, including:</p>
-    <ul class="grey-bullets">
-        <li>transition: <span id="css-demo-transition"></span></li>
-        <li>transform:  <span id="css-demo-transform"></span> i.e. <code>transform: translate(...)</code></li>
-        <li>support3D: <span id="css-demo-support3D"></span> i.e. <code>transform: translate3d</code></li>
-    </ul>
-    <p>You can return the value associated with a css property:</p>
-    <ul class="grey-bullets">
-        <li>transform: <span id="css-demo-return-transform"></span></li>
+    <ul class="list list--grey">
+        <li>transition: <span id="css-demo-transition" class="medium "></span>, with property <span id="css-demo-return-transform" class="medium "></span></li>
+        <li>transform:  <span id="css-demo-transform" class="medium "></span> </li>
+        <li>translate3d: <span id="css-demo-support3D" class="medium "></span></li>
+        <li>etc...</li>
     </ul>
 </div>
-
 <script>
-    function updateDetectCSS(toolkit){
-        var demoTransition = document.getElementById('css-demo-transition');
-        var demo3D = document.getElementById('css-demo-support3D');
-        var demoTransform = document.getElementById('css-demo-transform');
-        var returnTransform = document.getElementById('css-demo-return-transform');
+    var detect = skyComponents.detect;
+    var demoTransition = document.getElementById('css-demo-transition');
+    var demo3D = document.getElementById('css-demo-support3D');
+    var demoTransform = document.getElementById('css-demo-transform');
+    var returnTransform = document.getElementById('css-demo-return-transform');
 
-        var transition = toolkit.detect.css('transition');
-        var support3D = toolkit.detect.css('support3D');
-        var transform = toolkit.detect.css('transform');
+    demoTransition.innerHTML = detect.css('transition');
+    demo3D.innerHTML = detect.css('translate3d');
+    demoTransform.innerHTML = detect.css('transform');
 
-        demoTransition.innerHTML = transition;
-        demo3D.innerHTML = support3D;
-        demoTransform.innerHTML = transform;
-
-        returnTransform.innerHTML = toolkit.detect.css(demoTransition, 'transition');
-    }
-
-    updateDetectCSS(toolkit);
-</script>
-<h2>Orientation</h2>
-<p> Detect the device/window current orientation: <code>landscape</code> or <code>portrait</code>.</p>
-
-<ul class="grey-bullets">
-    <li>
-        current orientation: <span id="orientation-demo"></span>
-    </li>
-    <li>
-        is landscape: <span id="orientation-demo-is-landscape"></span>
-    </li>
-    <li>
-        is portrait: <span id="orientation-demo-is-portrait"></span>
-    </li>
-</ul>
-
-<script>
-    function updateOrientation(toolkit) {
-        var orientation = toolkit.detect.orientation();
-        var isPortrait = toolkit.detect.orientation('portrait');
-        var isLandscape = toolkit.detect.orientation('landscape');
-
-        document.querySelector('#orientation-demo').innerHTML = orientation;
-        document.querySelector('#orientation-demo-is-landscape').innerHTML = isLandscape;
-        document.querySelector('#orientation-demo-is-portrait').innerHTML = isLandscape;
-    }
-
-    window.onresize = updateOrientation(toolkit);
-    updateOrientation(toolkit);
-
+    returnTransform.innerHTML = detect.css(demoTransition, 'transition');
 </script>
 <h2>Touch</h2>
-<p> Detect if the device supports touch: <code>true</code> or <code>false</code>.</p>
+<p> Detect if the device supports touch.</p>
 <ul class="grey-bullets">
     <li>
-        Is touch supported: <span id="touch-demo"></span>
+        Is touch supported: <span id="touch-demo" class="medium"></span>
     </li>
 </ul>
 
-<script>
-    var touch = toolkit.detect.touch();
-    document.querySelector('#touch-demo').innerHTML = touch;
-</script>
-<h2>View</h2>
-<p> Detect the device/window current view: <code>mobile</code> or <code>desktop</code>.</p>
-<ul class="grey-bullets">
-    <li>
-        current view: <span id="view-demo"></span>
-    </li>
-    <li>
-        is desktop: <span id="view-demo-is-desktop"></span>
-    </li>
-    <li>
-        is mobile: <span id="view-demo-is-mobile"></span>
-    </li>
-</ul>
 
 <script>
-    function updateView(toolkit) {
-        var view = toolkit.detect.view();
-        var desktop = toolkit.detect.view('desktop');
-        var mobile = toolkit.detect.view('mobile');
-
-        document.querySelector('#view-demo').innerHTML = view;
-        document.querySelector('#view-demo-is-desktop').innerHTML = desktop
-        document.querySelector('#view-demo-is-mobile').innerHTML = mobile
-
-    }
-
-    window.onresize = updateView(toolkit);
-    updateView(toolkit);
+    document.querySelector('#touch-demo').innerHTML = skyComponents.detect.touch();
 </script>

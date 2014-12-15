@@ -177,20 +177,6 @@ body a.chevron:before, body a .skycon-chevron {
   vertical-align: top;
   float: left; }
 
-@media (orientation: portrait) {
-  html:before {
-    content: 'portrait';
-    font-family: 'portrait'; }
- }
-
-html:before {
-  content: 'landscape';
-  font-family: 'landscape'; }
-
-html:after {
-  content: 'desktop';
-  font-family: 'desktop'; }
-
 /* Common demo Sass here */
 .demo-block {
   margin-bottom: 20px;

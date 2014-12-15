@@ -115,4 +115,13 @@ module.exports = {
 
 if (typeof skyComponents === "undefined") window.skyComponents = {};
 skyComponents.detect = module.exports;
-},{}]},{},[1]);
+},{}],2:[function(require,module,exports){
+var detect = require('./detect');
+
+if (typeof window.define === "function" && window.define.amd) {
+    define('bower_components/bskyb-detect/dist/js/detect.requirejs', [], function() {
+        'use strict';
+        return detect;
+    });
+}
+},{"./detect":1}]},{},[2]);
