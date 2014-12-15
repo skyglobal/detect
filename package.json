@@ -1,6 +1,6 @@
 {
   "name": "detect",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Detect various browser capabilities and states",
   "devDependencies": {
     "browser-sync": "^1.7.3",
