@@ -106,11 +106,12 @@ function elementVisibleRight(el) {
 attachClasses();
 
 module.exports = {
-    css: css,
-    touch: touch,
-    state: state,
+    _state: state,
+    _attachClasses: attachClasses,
     elementVisibleBottom: elementVisibleBottom,
-    elementVisibleRight: elementVisibleRight
+    elementVisibleRight: elementVisibleRight,
+    css: css,
+    touch: touch
 };
 
 if (typeof skyComponents === "undefined") window.skyComponents = {};

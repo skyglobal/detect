@@ -105,9 +105,10 @@ function elementVisibleRight(el) {
 attachClasses();
 
 module.exports = {
+    _attachClasses: attachClasses,
+    _state: state,
     css: css,
     touch: touch,
-    state: state,
     elementVisibleBottom: elementVisibleBottom,
     elementVisibleRight: elementVisibleRight
 };
