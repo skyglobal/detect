@@ -1,23 +1,22 @@
-[detect](http://skyglobal.github.io/detect/)
+[Detect](http://skyglobal.github.io/detect/)
 ========================
 
-> Toolkit detect component
+> Please take a look at the [demo page](http://skyglobal.github.io/detect/)
 
-See http://skyglobal.github.io/detect/ for a demo of the Component
 
-## Usage
+## Quick-Start
 
-### As JS
+Include the Share assets in your project either as **Static Resources**
 
-http://web-toolkit.global.sky.com/components/detect/0.0.4/js/detect.min.js
+```
+<script type="text/javascript" src="href="http://web-toolkit.global.sky.com/components/detect/0.0.4/js/detect.min.js" ></script>
+```
 
-### As a Module
+or alternatively, **Via Bower**
 
-`bower install --save-dev bskyb-detect`
+ * Run: `bower install --save-dev bskyb-detect`
+ * Include JS: `var share = require('../../bower_components/bskyb-detect/src/js/detect');`
 
-### Locally
-
-`gulp serve`
 
 ## Contribution
 

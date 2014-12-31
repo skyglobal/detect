@@ -7,15 +7,16 @@
         "Peter Mouland <peter.mouland@gmail.com>"
     ],
     "description": "detect",
-    "main": "dist",
-    "license": "MIT",
+    "main": "dist/js/detect.js",
+    "license": "BSD3",
     "ignore": [
         "**/*",
         "!dist/**/*",
         "!src/**/*"
     ],
     "devDependencies": {
-        "bskyb-colours": "~0.0.8",
-        "bskyb-typography": "~0.0.3"
+        "bskyb-grid": "~0.1.0",
+        "bskyb-colours": "~0.1.0",
+        "bskyb-typography": "~0.1.0"
     }
 }
