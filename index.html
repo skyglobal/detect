@@ -9,52 +9,60 @@
 </head>
 <body>
 
-<h1>Detect
-    <small  class="demo-version text--secondary">v0.0.4
-        <a href="https://github.com/skyglobal/detect" class="text--secondary">
-            <span class="demo-icon demo-icon--github"  aria-hidden=true></span>
-            <span class="speak">Github Repo</span>
-        </a></small>
-</h1>
+<div class="skycom-container">
+    <h1>Detect
+        <small  class="demo-version text--secondary">v0.1.0
+            <a href="https://github.com/skyglobal/detect" class="text--secondary">
+                <span class="demo-icon demo-icon--github"  aria-hidden=true></span>
+                <span class="speak">Github Repo</span>
+            </a></small>
+    </h1>
 
-<p>The <code>detect</code> object allows you to check for a number of browser features and states.</p>
+    <p>The <code>detect</code> object allows you to check for a number of browser features and states.</p>
 
-
-
-
-
-<h2>CSS</h2>
-<div>
-    <p>You can detect many css style capabilities, including:</p>
-    <ul class="list list--grey">
-        <li>transition: <span id="css-demo-transition" class="medium "></span>, with property <span id="css-demo-return-transform" class="medium "></span></li>
-        <li>transform:  <span id="css-demo-transform" class="medium "></span> </li>
-        <li>translate3d: <span id="css-demo-support3D" class="medium "></span></li>
-        <li>etc...</li>
-    </ul>
 </div>
-<script>
-    var detect = skyComponents.detect;
-    var demoTransition = document.getElementById('css-demo-transition');
-    var demo3D = document.getElementById('css-demo-support3D');
-    var demoTransform = document.getElementById('css-demo-transform');
-    var returnTransform = document.getElementById('css-demo-return-transform');
-
-    demoTransition.innerHTML = detect.css('transition');
-    demo3D.innerHTML = detect.css('translate3d');
-    demoTransform.innerHTML = detect.css('transform');
-
-    returnTransform.innerHTML = detect.css(demoTransition, 'transition');
-</script>
-<h2>Touch</h2>
-<p> Detect if the device supports touch.</p>
-<ul class="grey-bullets">
-    <li>
-        Is touch supported: <span id="touch-demo" class="medium"></span>
-    </li>
-</ul>
 
 
-<script>
-    document.querySelector('#touch-demo').innerHTML = skyComponents.detect.touch();
-</script>
+
+
+
+<div class="skycom-container">
+    <h2>CSS</h2>
+    <div>
+        <p>You can detect many css style capabilities, including:</p>
+        <ul class="list list--grey">
+            <li>transition: <strong id="css-demo-transition" ></strong>, with property <strong id="css-demo-return-transform"></strong></li>
+            <li>transform:  <strong id="css-demo-transform" ></strong> </li>
+            <li>translate3d: <strong id="css-demo-support3D" ></strong></li>
+            <li>etc...</li>
+        </ul>
+    </div>
+    <script>
+        var detect = skyComponents.detect;
+        var demoTransition = document.getElementById('css-demo-transition');
+        var demo3D = document.getElementById('css-demo-support3D');
+        var demoTransform = document.getElementById('css-demo-transform');
+        var returnTransform = document.getElementById('css-demo-return-transform');
+
+        demoTransition.innerHTML = detect.css('transition');
+        demo3D.innerHTML = detect.css('translate3d');
+        demoTransform.innerHTML = detect.css('transform');
+
+        returnTransform.innerHTML = detect.css(demoTransition, 'transition');
+    </script>
+</div>
+
+<div class="skycom-container">
+    <h2>Touch</h2>
+    <p> Detect if the device supports touch.</p>
+    <ul class="list list--grey">
+        <li>
+            Is touch supported: <strong id="touch-demo"></strong>
+        </li>
+    </ul>
+
+
+    <script>
+        document.querySelector('#touch-demo').innerHTML = skyComponents.detect.touch();
+    </script>
+</div>
