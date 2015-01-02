@@ -99,5 +99,14 @@ describe('Detect module can use JS and HTML to know', function () {
 
     });
 
+    it('css an a specific element', function () {
+        expect(detect.css(document.body, 'display')).toBe('block');
+        expect(detect.css(document.body, 'unknown')).toBe(null);
+    });
+
+    it('retrieving css from state returns the same answer', function () {
+        expect(detect.css('display')).toBe(true);
+        expect(detect.css('display')).toBe(true);
+    });
 
 });
