@@ -9,7 +9,7 @@
 Include the Share assets in your project either as **Static Resources**
 
 ```
-<script type="text/javascript" src="href="http://web-toolkit.global.sky.com/components/detect/0.0.4/js/detect.min.js" ></script>
+<script type="text/javascript" src="href="http://web-toolkit.global.sky.com/components/detect/0.1.0/js/detect.min.js" ></script>
 ```
 
 or alternatively, **Via Bower**

@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.1.0
+
+  * Version bump to indicate more stable structure i.e. `src` within bower
+  * Added tests
+
 ## 0.0.4
 
   * Deleted 'view' classes
