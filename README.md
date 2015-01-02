@@ -1,4 +1,4 @@
-[Detect](http://skyglobal.github.io/detect/)
+[Detect](http://skyglobal.github.io/detect/) [![Circle CI](https://circleci.com/gh/skyglobal/detect/tree/master.svg?style=svg)](https://circleci.com/gh/skyglobal/detect/tree/master)
 ========================
 
 > Please take a look at the [demo page](http://skyglobal.github.io/detect/)
