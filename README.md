@@ -3,6 +3,7 @@
 
 > Detect browser capabilities and inspect the DOM i.e. is touch supported or find elements CSS. Please take a look at the [demo page](http://skyglobal.github.io/detect/)
 
+** DEPRECATED : Please use [core](https://github.com/skyglobal/core) https://github.com/skyglobal/core  **
 
 ## Quick-Start
 
